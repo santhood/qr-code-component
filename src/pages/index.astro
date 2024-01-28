@@ -1,0 +1,87 @@
+---
+import QRCard from '../components/QRCard.astro'
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon-32x32.png' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Frontend Mentor | QR code component</title>
+  </head>
+  <body>
+    <main>
+      <div class='qrs-container'>
+        <QRCard />
+      </div>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+  }
+  @font-face {
+    font-family: 'Outfit';
+    src: url('/fonts/Outfit-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Outfit';
+    src: url('/fonts/Outfit-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  * {
+    min-height: 0;
+    font: inherit;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  img,
+  video,
+  svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  body {
+    min-height: 100dvh;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    background-color: var(--light-gray);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    text-wrap: balance;
+  }
+  p {
+    margin: 0;
+    text-wrap: pretty;
+  }
+  .qrs-container {
+    min-height: 100dvh;
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  @media (max-height: 667px) {
+    .qrs-container {
+      padding-block: 5.5rem;
+      align-items: flex-start;
+    }
+  }
+</style>
